@@ -495,7 +495,7 @@ function Invoke-AuthenticateO365
       }
     } finally {
       $response.Dispose()
-    }
+    }   
     $BinarySecurityToken = $data.Envelope.Body.RequestSecurityTokenResponse.RequestedSecurityToken.BinarySecurityToken.InnerText
     if ($data.OuterXml.Contains("you must use multi-factor"))
     {
